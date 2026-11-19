@@ -1,0 +1,13 @@
+vec2 rotate(vec2 v, float a){
+	float t = atan(v.y,v.x)+a;
+    float d = length(v);
+    v.x = cos(t)*d;
+    v.y = sin(t)*d;
+    return v;
+}
+
+float getVal(vec2 uv, float i){
+    float d = length(mod(uv,1.0)-0.5)+0.7;
+    uv = rotate(uv,(i+length(uv))*.1);
+    return d+sin(uv.x*uv.y*0.2+i)*0.2;
+}
