@@ -1,0 +1,5 @@
+float getVal(vec2 uv, float i){
+    float d = length(uv);
+    float a = atan(uv.y,uv.x);
+    return clamp(mix(sin(a*20.0+i),clamp(sin(uv.x*10.0+i)*sin(uv.y*10.0+i),0.0,1.0),clamp(d,0.0,1.0)),0.0,1.0);
+}
