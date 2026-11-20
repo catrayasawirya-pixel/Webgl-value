@@ -1,0 +1,4 @@
+float getVal(vec2 uv,float i){
+     float d = length(uv);
+     return sin(1.5/d+i);
+}
