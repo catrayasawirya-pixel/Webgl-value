@@ -1,0 +1,5 @@
+float getVal2(vec2 uv, float i){
+    float d = length(uv);
+    float a = atan(uv.y,uv.x);
+    return (sin(cos(a)*d*50.0-i)+sin(sin(a)*d*50.0+i)+sin(sin(a)*d*10.0-i)+sin(cos(a)*d*12.0+i))/4.0;
+}
