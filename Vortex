@@ -1,0 +1,5 @@
+float getVal(vec2 uv, float i){
+    float d = length(uv);
+    float a = atan(uv.y,uv.x);
+    return clamp(abs(0.1/(d*sin(a*3.0+d*3.0+i)-0.35))*step(0.35,d*sin(a*3.0+d*3.0+i)),0.0,1.0);
+}
